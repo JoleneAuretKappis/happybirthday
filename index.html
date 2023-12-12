@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 10;
+      overflow: hidden;
+    }
+
+    @keyframes balloonAnimation {
+      0% {
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        transform: translateY(-200px) scale(1.2);
+      }
+      100% {
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes fireworkAnimation {
+      0% {
+        opacity: 0;
+        transform: translateY(0) scale(1);
+      }
+      50% {
+        opacity: 1;
+        transform: translateY(-200px) scale(1.2);
+      }
+      100% {
+        opacity: 0;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    .container {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #000;
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      animation: balloonAnimation 5s ease-in-out infinite;
+    }
+
+    .rainbow-text {
+      background-image: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+      -webkit-background-clip: text;
+      color: transparent;
+      font-size: 3em;
+    }
+
+    .balloon {
+      position: absolute;
+      background-color: rgba(238, 0, 255, 0.7);
+      border-radius: 50%;
+      width: 50px;
+      height: 70px;
+      animation: balloonAnimation 2s ease-in-out infinite;
+    }
+
+    .firework {
+      position: absolute;
+      background-color: #ff0;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      animation: fireworkAnimation 2s ease-in-out infinite;
+    }
+
+    .firework1 { top: 100px; left: 50px; }
+    .firework2 { top: 150px; left: 150px; }
+    .firework3 { top: 200px; left: 250px; }
+    .firework4 { top: 350px; left: 350px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="rainbow-text">Happy Birthday Hans!!!</div>
+    <div class="balloon"></div>
+    <div class="firework firework1"></div>
+    <div class="firework firework2"></div>
+    <div class="firework firework3"></div>
+    <div class="firework firework4"></div>
+
+  </div>
+</body>
+</html>
